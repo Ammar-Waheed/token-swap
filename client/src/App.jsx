@@ -121,7 +121,7 @@ function App() {
             contract.methods
                 .approve(
                     trade20.networks["5"].address,
-                    web3.utils.toWei("1000", "ether")
+                    web3.utils.toWei(amount.current.toString(), "ether")
                 )
                 .send({ from: accounts[0] })
                 .on("receipt", (rec) => {
